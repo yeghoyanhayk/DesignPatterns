@@ -29,17 +29,12 @@ public class SalaryManager
         SalaryCalculator = salaryCalculator;
     }
 
-    public SalaryManager()
-    {
-        
-    }
-
     public void SetCalculator(ISalaryCalculator salaryCalculator) => SalaryCalculator = salaryCalculator;
 
     public void SetSalary(int amount)
     {
         if (SalaryCalculator is null)
-            throw new ArgumentNullException();
+            throw new ArgumentNullException(nameof(SalaryCalculator));
 
         var salary = SalaryCalculator.Calculate(amount);
         Salary = salary;
