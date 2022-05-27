@@ -36,7 +36,7 @@ public class SingletonThreadSafe
     {
     }
 
-    private static readonly object LockThis = new object();
+    private static readonly object LockThis = new();
 
     public static SingletonThreadSafe? GetInstance
     {

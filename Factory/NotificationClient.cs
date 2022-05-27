@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace DesignPatterns.Factory;
 
 public abstract class NotificationClient : IDisposable
